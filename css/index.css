@@ -24,12 +24,12 @@
     width: 100%;
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    z-index: 10;
 }
 .hdrWrap header{
     width: 80%;
     max-width: 1080px;
     margin: 0 auto;
-    font-family: 'nsr';
 }
 .hdrWrap .hdrTop{
     margin-top: 20px;
@@ -147,9 +147,214 @@ form{
     cursor: pointer;
 }
 
+/* 공통 */
+.image{
+    color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    font-family: 'nsr';
+    overflow-x: hidden;
+}
 /* 메인 */
 .mainWrap{
     height: 100vh;
+    padding-top: 150px;
+    background-color: #c8e7e6;
+}
+main{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+}
+.mainTop{
+    overflow: hidden;
+}
+.mainTop .group{
+    display: flex;
+    width: 300%;
+}
+.mainTop .slide{
+    width: 100%;
+    position: relative;
+}
+.mainTop .slide .texts{
+    padding-left: calc(100% / 12);
+    padding-top: 80px;
+}
+.mainTop .slide .texts h4{
+    display: inline-block;
+    font-size: 20px;
+    line-height: 25px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.mainTop .slide .texts h3{
+    font-size: 36px;
+    line-height: 40px;
+    font-family: 'mg';
+    margin-top: 20px;
+    font-weight: 700;
+}
+.mainTop .slide .texts p{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 30px;
+}
+.mainTop .slide .texts .btn{
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    padding: 13px 0px;
+    border-radius: 20px;
+    text-align: center;
+    height: 40px;
+    width: calc(100% / 12 * 1.5);
+    cursor: pointer;
+    margin-top: 40px;
+}
+.mainTop .slide .texts .btn span{
+    font-family: 'con';
+    margin-left: 5px;
+}
+.mainTop .slide .image{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background-image: url('../images/main01.png');
+}
+.mainTop .slide .image.i1{}
+.mainTop .slide .image.i2{}
+.mainTop .slide .image.i3{}
+.LRbtn{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0;
+    left: -43px;
+    width: 108%;
+    margin: auto;
+    height: 54px;
+}
+.LRbtn .image{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: left;
+    background-image: url('../images/LRbtn.png');
+    cursor: pointer;
+}
+.LRbtn .image:last-child{
+    background-position: right;
+}
+.mainBtm{
+    padding: 40px calc(100% / 12);
+    position: relative;
+    z-index: 0;
+    margin-top: 60px;
+}
+.mainBtm::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100vw;
+    margin-left: min(calc((100vw - 1080px) / -2),calc((100vw - 80vw) / -2));
+    left: 0;
+    height: 600px;
+    background-color: #fdf6d2;
+    bottom: -300px;
+    z-index: -1;
+    clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 71%);
+}
+.mainBtm>.btn{
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    right: 250px;
+    top: -20px;
+}
+.mainBtm>.btn span{
+    font-family: 'con';
+    line-height: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.mainBtm .btn .paging{
+    display: flex;
+}
+.mainBtm .btn .paging li{
+    width: 8px;
+    height: 8px;
+    border: 0.5px solid #686868;
+    background-color: #adc0c0;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.mainBtm .btn .paging li.on{
+    background-color: #276de2;
+}
+.mainBtm .menu{
+    display: flex;
+    justify-content: space-between;
+}
+.mainBtm .menu li{
+    width: calc(100% / 6);
+    border-right: 2px solid #d9d9d9;
+    cursor: pointer;
+}
+.mainBtm .menu li:last-child{
+    border: 0;
+}
+.mainBtm .menu li h4{
+    line-height: 40px;
+    font-size: 17px;
+    text-align: center;
+}
+.mainBtm .menu li .image{
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+}
+.mainBtm .menu li .image.i1{
+    background-image: url('../images/icon01.png');
+}
+.mainBtm .menu li .image.i2{
+    background-image: url('../images/icon02.png');
+}
+.mainBtm .menu li .image.i3{
+    background-image: url('../images/icon03.png');
+}
+.mainBtm .menu li .image.i4{
+    background-image: url('../images/icon04.png');
+}
+.mainBtm .menu li .image.i5{
+    background-image: url('../images/icon05.png');
+}
+.mainBtm .menu li .image.i6{
+    background-image: url('../images/icon06.png');
+}
+.mainBtm .scbtn{
+    margin: 0 auto;
+    width: 20px;
+}
+.mainBtm .scbtn .image{
+    width: 100%;
+    height: 40px;
+    background-image: url('../images/mouse.png');
+}
+.mainBtm .scbtn span{
+    font-family: 'con';
+    font-size: 20px;
 }
 
 /* 컨텐츠 공통 */
