@@ -63,7 +63,7 @@ body{
     border-radius: 50%;
     margin-left: 10px;
     cursor: pointer;
-    transition: all 0.5s 0.4s;
+    transition: all 0.5s;
 }
 .sdBtn .paging li.on{
     background-color: #276de2;
@@ -498,6 +498,9 @@ main{
     margin-top: 20px;
 }
 /* 컨텐츠2 */
+.cntWrap:nth-child(4){
+    background-color: #dcecf4;;
+}
 .cnt02 header{
     display: flex;
     justify-content: space-between;
@@ -536,9 +539,21 @@ main{
 }
 .cnt02 .artLeft{
     width: calc(100% / 12 * 8);
+    position: relative;
 }
-.cnt02 .artLeft .btn{}
-.cnt02 .artLeft .btn{}
+.cnt02 .artLeft .sdBtn li{
+    cursor: not-allowed;
+}
+.cnt02 .textView{
+    overflow: hidden;
+    height: 280px;
+}
+.cnt02 .textView .texts{
+    display: none;
+}
+.cnt02 .textView .texts.on{
+    display: block;
+}
 .cnt02 .textView h4{
     font-size: 18px;
     margin-top: 20px;
@@ -548,25 +563,97 @@ main{
     font-weight: 700;
     margin-top: 30px;
 }
-.cnt02 .textView ul{}
 .cnt02 .textView ul li{
     font-size: 18px;
     line-height: 30px;
 }
-.cnt02 .imgView{}
+.cnt02 .imgView{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    width: 300px;
+}
 .cnt02 .imgGroup{
     display: flex;
+    width: 200%;
 }
 .cnt02 .imgGroup .image{
-    width: 140px;
-    height: 220px;
-    background-color: #000;
+    width: calc(100% / 6);
+    height: 160px;
+    transform: scale(0.5) rotate(-60deg);
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(.58,0,.01,.99) ;
+    box-shadow: -6px 7px 6px #24242466;
+    border-radius: 10px;
 }
-.cnt02 .imgGroup .image.i1{}
-.cnt02 .imgGroup .image.i2{}
-.cnt02 .imgGroup .image.i3{}
+.cnt02 .imgGroup .image.i1 , .image.i4{
+    background-image: url('../images/cd01.png');
+}
+.cnt02 .imgGroup .image.i2 , .image.i5{
+    background-image: url('../images/cd02.png');
+}
+.cnt02 .imgGroup .image.i3 , .image.i6{
+    background-image: url('../images/cd03.png');
+}
+
+.cnt02 .imgGroup .image.third{
+    transform: scale(0.6) rotate(-60deg) translate(0px, -130%);
+    opacity: 1;
+}
+.cnt02 .imgGroup .image.second{
+    transform: scale(0.9) rotate(-60deg) translate(0px, 33%);
+    opacity: 1;
+    z-index: 3;
+}
+.cnt02 .imgGroup .image.first{
+    transform: scale(1.5) rotate(-60deg);
+    opacity: 1;
+    z-index: 5;
+}
+.cnt02 .imgGroup .image.fourth{
+    transform: scale(0.6) rotate(-60deg) translate(-30%, -300%);
+}
 .cnt02 .artRight{
     width: calc(100% / 12 * 4);
+}
+.cnt02 .artRight .view{
+    width: 100%;
+    overflow: hidden;
+}
+.cnt02 .artRight .Group{
+    width: 200%;
+    display: flex;
+}
+.cnt02 .artRight .slide{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+.cnt02 .artRight .text h3{
+    font-size: 20px;
+    font-family: 'nsr';
+    font-weight: 700;
+    line-height: 40px;
+    margin-top: 20px;
+}
+.cnt02 .artRight .text p{
+    font-size: 16px;
+    line-height: 20px;
+}
+.cnt02 .artRight .image{
+    width: 150px;
+    height: 90px;
+    margin-top: 25px;
+}
+.cnt02 .artRight .image.i1{
+    background-image: url('../images/cd04.png');
+}
+.cnt02 .artRight .image.i2{
+    background-image: url('../images/cd05.png');
+}
+.cnt02 .artRight .image.i3{
+    background-image: url('../images/cd06.jpg');
 }
 /* 컨텐츠3 */
 /* 컨텐츠4 */
