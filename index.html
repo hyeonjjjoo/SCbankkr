@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/index.js"></script>
 </head>
 <body>
@@ -47,9 +48,10 @@
                 </form>
             </div>
         </header>
+        <nav></nav>
     </div>
     <!-- 메인 -->
-    <div class="mainWrap">
+    <div class="mainWrap" >
         <main>
             <div class="LRbtn">
                 <div class="image">왼쪽버튼</div>
@@ -57,7 +59,7 @@
             </div>
             <div class="mainTop">
                 <div class="group">
-                    <div class="slide">
+                    <div class="slide" data-col="#c8e7e6">
                         <div class="texts">
                             <h4>EVENT</h4>
                             <h3>투자성향 분석 이벤트!</h3>
@@ -66,7 +68,7 @@
                         </div>
                         <div class="image i1 in"></div>
                     </div>
-                    <div class="slide">
+                    <div class="slide" data-col="#fcdfdf">
                         <div class="texts">
                             <h4>EVENT</h4>
                             <h3>투자성향 분석 이벤트!22</h3>
@@ -75,7 +77,7 @@
                         </div>
                         <div class="image i2"></div>
                     </div>
-                    <div class="slide">
+                    <div class="slide" data-col="#e6dffd">
                         <div class="texts">
                             <h4>EVENT</h4>
                             <h3>투자성향 분석 이벤트!333</h3>
@@ -84,7 +86,7 @@
                         </div>
                         <div class="image i3"></div>
                     </div>
-                    <div class="slide">
+                    <div class="slide" data-col="#c8e7e6">
                         <div class="texts">
                             <h4>EVENT</h4>
                             <h3>투자성향 분석 이벤트!</h3>
@@ -93,7 +95,7 @@
                         </div>
                         <div class="image i1"></div>
                     </div>
-                    <div class="slide">
+                    <div class="slide" data-col="#fcdfdf">
                         <div class="texts">
                             <h4>EVENT</h4>
                             <h3>투자성향 분석 이벤트!22</h3>
@@ -102,7 +104,7 @@
                         </div>
                         <div class="image i2"></div>
                     </div>
-                    <div class="slide">
+                    <div class="slide" data-col="#e6dffd">
                         <div class="texts">
                             <h4>EVENT</h4>
                             <h3>투자성향 분석 이벤트!33</h3>
@@ -300,11 +302,21 @@
                 </div>
                 <div class="artBtm">
                     <ul>
-                        <li>카드사용등록</li>
-                        <li>발급상황조회</li>
-                        <li>카드안내신청</li>
-                        <li>전화신청</li>
-                        <li>빠른발급신청</li>
+                        <li>카드사용등록
+                            <a href="#">카드사용등록</a>
+                        </li>
+                        <li>발급상황조회
+                            <a href="#">발급상황조회</a>
+                        </li>
+                        <li>카드안내신청
+                            <a href="#">카드안내신청</a>
+                        </li>
+                        <li>전화신청
+                            <a href="#">전화신청</a>
+                        </li>
+                        <li>빠른발급신청
+                            <a href="#">빠른발급신청</a>
+                        </li>
                     </ul>
                     <div class="box"></div>
                 </div>
@@ -319,36 +331,116 @@
             </header>
             <section>
                 <ul class="tab">
-                    <li><span>1</span>SC 제일은행과 거래가 전혀 없는데도<br>대출신청이 가능합니까?</li>
-                    <li>
-                        <div class="icon"></div>
-                        <div class="text">
-                            <h4>장기카드대출(카드론)</h4>
-                            <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                    <li class="on">
+                        <h5>1</h5>
+                        <h3>SC 제일은행과 거래가 전혀 없는데도<br>대출신청이 가능합니까?</h3>
+                    </li>
+                    <li class="on">
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
                         </div>
                     </li>
-                    <li><span>2</span>SC 제일은행과 거래가 전혀 없는데도<br>대출신청이 가능합니까?</li>
                     <li>
-                        <div class="icon"></div>
-                        <div class="text">
-                            <h4>장기카드대출(카드론)</h4>
-                            <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                        <h5>2</h5>
+                        <h3>SC 제일은행과 거래가 전혀 없는데도<br>대출신청이 가능합니까?</h3>
+                    <li>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
                         </div>
                     </li>
-                    <li><span>3</span>SC 제일은행과 거래가 전혀 없는데도<br>대출신청이 가능합니까?</li>
                     <li>
-                        <div class="icon"></div>
-                        <div class="text">
-                            <h4>장기카드대출(카드론)</h4>
-                            <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                        <h5>3</h5>
+                        <h3>SC 제일은행과 거래가 전혀 없는데도<br>대출신청이 가능합니까?</h3>
+                    <li>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
                         </div>
                     </li>
-                    <li><span>4</span>SC 제일은행과 거래가 전혀 없는데도<br>대출신청이 가능합니까?</li>
                     <li>
-                        <div class="icon"></div>
-                        <div class="text">
-                            <h4>장기카드대출(카드론)</h4>
-                            <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                        <h5>4</h5>
+                        <h3>SC 제일은행과 거래가 전혀 없는데도<br>대출신청이 가능합니까?</h3>
+                    <li>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
+                        </div>
+                        <div class="texts">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h4>장기카드대출(카드론)</h4>
+                                <p>카드 > SC제일은행 비씨카드 > 장기카드대출(카드론)</p>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -367,26 +459,18 @@
                         <div class="news">
                             <h4>새소식</h4>
                             <ul>
-                                <li>SC제일은행 만 65세 이상 고객 대상..</li>
+                                <li><h5>SC제일은행 만 65세 이상 고객 대상 서비스</h5></li>
                                 <li>예금금리 변경 안내</li>
                                 <li>숨은 금융자산 찾기 캠페인</li>
                             </ul>
                         </div>
-                        <div class="view">
+                        <div class="customer">
                             <h4>금융소비자보호</h4>
-                            <div class="sdbtn">
-                                <span></span>
-                                <span></span>
-                                <ul class="paging">
-                                    <li class="on"></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div class="Group">
-                                <p>궁금한 신용카드업무 <br>절자와 기준</p>
-                                <div class="image"></div>
-                            </div>
+                            <ul>
+                                <li><h5>SC제일은행 만 65세 이상 고객 대상 서비스</h5></li>
+                                <li>예금금리 변경 안내</li>
+                                <li>숨은 금융자산 찾기 캠페인</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="artBtm">
@@ -412,6 +496,7 @@
                 </div>
                 <div class="artRight">
                     <ul>
+                         <div class="image">보안이미지</div>
                         <li>금융소비자보호</li>
                         <li>주택도시기금</li>
                         <li>에스크로</li>
@@ -422,7 +507,7 @@
     </div>
     <!-- 푸터 -->
     <div class="ftrWrap">
-        <div class="footer">
+        <footer>
             <div class="ftrtop">
                 <ul>
                     <li>회사소개</li>
@@ -434,14 +519,14 @@
                 </ul>
             </div>
             <div class="ftrBtm">
-                <div class="logo"></div>
+                <div class="logo">로고이미지</div>
                 <div class="info">
                     <h4>03160 서울특별시종로구 종로 47 (공평동 100) SC제일은행 본점 </h4>
                     <h4>Copyright ⓒ 2016 Standard Chartered Bank Korea Limited.</h4>
                 </div>
-                <div class="cs"></div>
+                <div class="cs">고객센터이미지</div>
             </div>
-        </div>
+        </footer>
     </div>
 
 </body>
